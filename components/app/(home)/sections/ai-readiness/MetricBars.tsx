@@ -20,11 +20,11 @@ export default function MetricBars({ metrics }: MetricBarsProps) {
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
   
   const getBarColor = (score: number) => {
-    // Use brand orange colors with opacity for gradient effect
+    // Use electric blue colors with opacity for gradient effect
     if (score >= 80) return 'bg-heat-100';
-    if (score >= 60) return 'bg-heat-90';
-    if (score >= 40) return 'bg-heat-40 opacity-80';
-    return 'bg-heat-20';
+    if (score >= 60) return 'bg-heat-40';
+    if (score >= 40) return 'bg-heat-20 opacity-80';
+    return 'bg-heat-12';
   };
   
   const getBulletColor = (score: number) => {
@@ -165,7 +165,7 @@ export default function MetricBars({ metrics }: MetricBarsProps) {
       >
         <div className="grid grid-cols-3 gap-16 text-center">
           <div>
-            <div className="text-title-h3 text-heat-150">
+            <div className="text-title-h3 text-heat-100">
               {metrics.filter(m => m.status === 'pass').length}
             </div>
             <div className="text-label-small text-black-alpha-48">Passing</div>
@@ -177,7 +177,7 @@ export default function MetricBars({ metrics }: MetricBarsProps) {
             <div className="text-label-small text-black-alpha-48">Warning</div>
           </div>
           <div>
-            <div className="text-title-h3 text-heat-50">
+            <div className="text-title-h3 text-heat-40">
               {metrics.filter(m => m.status === 'fail').length}
             </div>
             <div className="text-label-small text-black-alpha-48">Failing</div>

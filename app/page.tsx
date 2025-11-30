@@ -28,8 +28,6 @@ import ControlPanel from "@/components/app/(home)/sections/ai-readiness/ControlP
 import HeaderBrandKit from "@/components/shared/header/BrandKit/BrandKit";
 import HeaderWrapper from "@/components/shared/header/Wrapper/Wrapper";
 import HeaderDropdownWrapper from "@/components/shared/header/Dropdown/Wrapper/Wrapper";
-import GithubIcon from "@/components/shared/header/Github/_svg/GithubIcon";
-import ButtonUI from "@/components/ui/shadcn/button";
 
 export default function StyleGuidePage() {
   const [tab, setTab] = useState<Endpoint>(Endpoint.Scrape);
@@ -139,17 +137,6 @@ export default function StyleGuidePage() {
               </div>
               
               <div className="flex gap-8">
-                {/* GitHub Template Button */}
-                <a
-                  className="contents"
-                  href="https://github.com/firecrawl/ai-ready-website"
-                  target="_blank"
-                >
-                  <ButtonUI variant="tertiary">
-                    <GithubIcon />
-                    Use this Template
-                  </ButtonUI>
-                </a>
               </div>
             </div>
           </HeaderWrapper>
@@ -176,16 +163,15 @@ export default function StyleGuidePage() {
                   <HomeHeroTitle />
                   
                   <p className="text-center text-body-large">
-                    Analyze how AI-ready your webpage is from a single
+                    Analyze how AI-ready your real estate website is from a single
                     <br className="lg-max:hidden" />
-                    page snapshot. High-signal metrics for LLM compatibility.
+                    page snapshot. Optimize your listings for AI-powered search and discovery.
                   </p>
                   <Link
                     className="bg-black-alpha-4 hover:bg-black-alpha-6 rounded-6 px-8 lg:px-6 text-label-large h-30 lg:h-24 block mt-8 mx-auto w-max gap-4 transition-all"
                     href="#"
                     onClick={(e) => e.preventDefault()}
                   >
-                    Powered by Firecrawl.
                   </Link>
                 </motion.div>
               ) : (
